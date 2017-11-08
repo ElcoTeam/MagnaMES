@@ -1,0 +1,5 @@
+D:\MagnaMES.git\trunk\Magna.Utility\bin\Debug\Magna.Utility.dll
+D:\MagnaMES.git\trunk\Magna.Utility\bin\Debug\Magna.Utility.pdb
+D:\MagnaMES.git\trunk\Magna.Utility\obj\Debug\Magna.Utility.csprojResolveAssemblyReference.cache
+D:\MagnaMES.git\trunk\Magna.Utility\obj\Debug\Magna.Utility.dll
+D:\MagnaMES.git\trunk\Magna.Utility\obj\Debug\Magna.Utility.pdb
