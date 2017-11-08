@@ -57,12 +57,92 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\adminLTE\css\index.css" />
+    <Content Include="Content\adminLTE\css\skins\_all-skins.css" />
+    <Content Include="Content\adminLTE\index.js" />
+    <Content Include="Content\images\ajax-loader.gif" />
+    <Content Include="Content\images\datepicker_icon.png" />
+    <Content Include="Content\images\filetype\pdf.png" />
+    <Content Include="Content\images\filetype\xls.png" />
+    <Content Include="Content\images\head\user2-160x160.jpg" />
+    <Content Include="Content\images\hislider-arrow.png" />
+    <Content Include="Content\images\icon_app_add.png" />
+    <Content Include="Content\images\loading.gif" />
+    <Content Include="Content\images\logo-headere47d5.png" />
+    <Content Include="Content\images\logo.png" />
+    <Content Include="Content\images\ui_close.png" />
+    <Content Include="Content\scripts\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\scripts\jquery-1.10.2.min.js" />
+    <Content Include="Content\scripts\jquery-1.11.1.min.js" />
+    <Content Include="Content\scripts\plugins\cookie\jquery.cookie.js" />
+    <Content Include="Content\scripts\plugins\dialog\default\icon.png" />
+    <Content Include="Content\scripts\plugins\dialog\dialog.css" />
+    <Content Include="Content\scripts\plugins\dialog\dialog.js" />
+    <Content Include="Content\scripts\plugins\hiSlider\jquery.hiSlider.css" />
+    <Content Include="Content\scripts\plugins\hiSlider\jquery.hiSlider.js" />
+    <Content Include="Content\scripts\plugins\jqgrid\grid.locale-cn.js" />
+    <Content Include="Content\scripts\plugins\jqgrid\jqgrid.css" />
+    <Content Include="Content\scripts\plugins\jqgrid\jqgrid.min.js" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\animated-overlay.gif" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\scripts\plugins\jquery-ui\jquery-ui.min.css" />
+    <Content Include="Content\scripts\plugins\jquery-ui\jquery-ui.min.js" />
+    <Content Include="Content\scripts\plugins\layout\jquery.layout.js" />
+    <Content Include="Content\scripts\plugins\printTable\jquery-migrate-1.2.1.min.js" />
+    <Content Include="Content\scripts\plugins\printTable\jquery.jqprint-0.3.js" />
+    <Content Include="Content\scripts\plugins\printTable\jquery.printTable.js" />
+    <Content Include="Content\scripts\plugins\printTable\learun-report.css" />
+    <Content Include="Content\scripts\plugins\searchSelect\combo.select.css" />
+    <Content Include="Content\scripts\plugins\searchSelect\jquery.combo.select.js" />
+    <Content Include="Content\scripts\plugins\searchSelect\jquery.searchableSelect.css" />
+    <Content Include="Content\scripts\plugins\searchSelect\jquery.searchableSelect.js" />
+    <Content Include="Content\scripts\plugins\searchSelect\tinyselect.css" />
+    <Content Include="Content\scripts\plugins\searchSelect\tinyselect.js" />
+    <Content Include="Content\scripts\plugins\tree\tree.css" />
+    <Content Include="Content\scripts\plugins\tree\tree.js" />
+    <Content Include="Content\scripts\plugins\uploadify\ajaxfileupload.js" />
+    <Content Include="Content\scripts\plugins\uploadify\jquery.uploadify.min.js" />
+    <Content Include="Content\scripts\plugins\uploadify\Uploader.swf" />
+    <Content Include="Content\scripts\plugins\uploadify\uploadify-cancel.png" />
+    <Content Include="Content\scripts\plugins\uploadify\uploadify.css" />
+    <Content Include="Content\scripts\plugins\uploadify\uploadify.extension.css" />
+    <Content Include="Content\scripts\plugins\uploadify\uploadify.swf" />
+    <Content Include="Content\scripts\plugins\uploadify\webuploader.css" />
+    <Content Include="Content\scripts\plugins\uploadify\webuploader.js" />
+    <Content Include="Content\scripts\plugins\validator\validator.js" />
+    <Content Include="Content\scripts\plugins\wizard\wizard.css" />
+    <Content Include="Content\scripts\plugins\wizard\wizard.js" />
+    <Content Include="Content\scripts\utils\learun-form.js" />
+    <Content Include="Content\scripts\utils\learun-ui.js" />
+    <Content Include="Content\styles\font-awesome.min.css" />
+    <Content Include="Content\styles\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\styles\learun-report.css" />
+    <Content Include="Content\styles\learun-ui.css" />
+    <Content Include="HomePage.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\styles\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\styles\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\styles\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\styles\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\styles\fonts\FontAwesome.otf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -79,9 +159,9 @@
       <Project>{cef02b99-0859-4edf-b206-ad539336d49f}</Project>
       <Name>Magna.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Magnaa.Utility\Magnaa.Utility.csproj">
-      <Project>{f6a6d6b4-7bc0-4d30-9b29-81ee4c874d08}</Project>
-      <Name>Magnaa.Utility</Name>
+    <ProjectReference Include="..\Magna.Utility\Magna.Utility.csproj">
+      <Project>{e15a6560-317d-4512-90fe-7e6358e2f540}</Project>
+      <Name>Magna.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
