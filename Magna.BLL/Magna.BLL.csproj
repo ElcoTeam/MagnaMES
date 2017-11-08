@@ -50,9 +50,9 @@
       <Project>{cef02b99-0859-4edf-b206-ad539336d49f}</Project>
       <Name>Magna.Model</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Magnaa.Utility\Magnaa.Utility.csproj">
-      <Project>{f6a6d6b4-7bc0-4d30-9b29-81ee4c874d08}</Project>
-      <Name>Magnaa.Utility</Name>
+    <ProjectReference Include="..\Magna.Utility\Magna.Utility.csproj">
+      <Project>{e15a6560-317d-4512-90fe-7e6358e2f540}</Project>
+      <Name>Magna.Utility</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

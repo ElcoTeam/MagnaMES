@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magna.Model", "Magna.Model\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magna.Web", "Magna.Web\Magna.Web.csproj", "{0E336453-A34E-47C1-B7A4-86CB6576ADC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magna.Utility", "Magna.Utility\Magna.Utility.csproj", "{F6A6D6B4-7BC0-4D30-9B29-81EE4C874D08}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Magna.Utility", "Magna.Utility\Magna.Utility.csproj", "{E15A6560-317D-4512-90FE-7E6358E2F540}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{0E336453-A34E-47C1-B7A4-86CB6576ADC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0E336453-A34E-47C1-B7A4-86CB6576ADC0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0E336453-A34E-47C1-B7A4-86CB6576ADC0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F6A6D6B4-7BC0-4D30-9B29-81EE4C874D08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F6A6D6B4-7BC0-4D30-9B29-81EE4C874D08}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F6A6D6B4-7BC0-4D30-9B29-81EE4C874D08}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F6A6D6B4-7BC0-4D30-9B29-81EE4C874D08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E15A6560-317D-4512-90FE-7E6358E2F540}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E15A6560-317D-4512-90FE-7E6358E2F540}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E15A6560-317D-4512-90FE-7E6358E2F540}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E15A6560-317D-4512-90FE-7E6358E2F540}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
