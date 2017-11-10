@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.1.50.2\lib\net45\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -135,6 +138,9 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Menu\GetMenuList.ashx.cs">
+      <DependentUpon>GetMenuList.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +149,8 @@
     <Content Include="Content\styles\fonts\fontawesome-webfont.woff" />
     <Content Include="Content\styles\fonts\fontawesome-webfont.woff2" />
     <Content Include="Content\styles\fonts\FontAwesome.otf" />
+    <Content Include="packages.config" />
+    <Content Include="Menu\GetMenuList.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

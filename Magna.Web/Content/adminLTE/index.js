@@ -350,43 +350,42 @@
         loadMenu: function () {
             var _html = "";
             $.ajax({
-                url: "fMenu.aspx/GetMenuList",
+                url: "Menu/GetMenuList.ashx",
                 type: "post",
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 success: function (data) {
-                    console.log(data.d);
-                    $.each(data.d, function (i) {
-                        var row = data.d[i];
-
-                        if (row.parentno == "0000") {
+                    console.log(data);
+                    $.each(data, function (i) {
+                        var row = data[i];
+                        if (row.ParentNo == "0000") {
                             if (i == 0) {
                                 _html += '<li class="treeview">';
                             } else {
                                 _html += '<li class="treeview">';
                             }
                             _html += '<a href="#" >'
-                            _html += '<i class="' + row.img + '"></i><span style="font-size:15px;">' + row.menuname + '</span><i class="fa fa-angle-left pull-right"></i>'
+                            _html += '<i class="' + row.Image + '"></i><span style="font-size:15px;">' + row.MenuName + '</span><i class="fa fa-angle-left pull-right"></i>'
                             _html += '</a>'
-                            var childNodes = $.learunindex.jsonWhere(data.d, function (v) { return v.parentno == row.menuno });
+                            var childNodes = $.learunindex.jsonWhere(data, function (v) { return v.ParentNo == row.MenuNo });
                             if (childNodes.length > 0) {
                                 _html += '<ul class="treeview-menu">';
                                 $.each(childNodes, function (i) {
                                     var subrow = childNodes[i];
-                                    var subchildNodes = $.learunindex.jsonWhere(data.d, function (v) { return v.parentno == subrow.menuno });
+                                    var subchildNodes = $.learunindex.jsonWhere(data, function (v) { return v.ParentNo == subrow.MenuNo });
                                     _html += '<li>';
                                     if (subchildNodes.length > 0) {
-                                        _html += '<a href="#"><i class="' + subrow.img + '"></i>' + subrow.menuname + '';
+                                        _html += '<a href="#"><i class="' + subrow.Image + '"></i>' + subrow.MenuName + '';
                                         _html += '<i class="fa fa-angle-left pull-right"></i></a>';
                                         _html += '<ul class="treeview-menu">';
                                         $.each(subchildNodes, function (i) {
                                             var subchildNodesrow = subchildNodes[i];
-                                            _html += '<li><a class="menuItem" data-id="' + subchildNodesrow.mennuno + '" href="' + subchildNodesrow.url + '"><i class="' + subchildNodesrow.img + '"></i>' + subchildNodesrow.menuname + '</a></li>';
+                                            _html += '<li><a class="menuItem" data-id="' + subchildNodesrow.MenuNo + '" href="' + subchildNodesrow.MenuAddr + '"><i class="' + subchildNodesrow.Image + '"></i>' + subchildNodesrow.MenuName + '</a></li>';
                                         });
                                         _html += '</ul>';
 
                                     } else {
-                                        _html += '<a class="menuItem" data-id="' + subrow.menuno + '" href="' + subrow.url + '"><i class="' + subrow.img + '"></i>' + subrow.menuname + '</a>';
+                                        _html += '<a class="menuItem" data-id="' + subrow.MenuNo + '" href="' + subrow.MenuAddr + '"><i class="' + subrow.Image + '"></i>' + subrow.MenuName + '</a>';
                                     }
                                     _html += '</li>';
                                 });
