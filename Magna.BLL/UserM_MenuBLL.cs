@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Magna.Model;
 using Magna.DAL;
 using Magna.Utility;
+
 namespace Magna.BLL
 {
     public class UserM_MenuBLL

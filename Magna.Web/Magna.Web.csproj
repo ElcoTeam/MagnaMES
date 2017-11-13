@@ -135,11 +135,19 @@
     <Content Include="Content\styles\learun-report.css" />
     <Content Include="Content\styles\learun-ui.css" />
     <Content Include="HomePage.html" />
+    <Content Include="Menu\Test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Menu\GetMenuList.ashx.cs">
       <DependentUpon>GetMenuList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Menu\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Menu\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

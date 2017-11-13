@@ -19,6 +19,7 @@ namespace Magna.DAL
             
             using (var conn = new SqlConnection(SqlConnString))
             {
+                
                 //SqlCommand cmd = new SqlCommand();
                 //conn.Open();
                 //cmd.Connection = conn;

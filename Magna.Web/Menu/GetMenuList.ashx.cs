@@ -12,12 +12,20 @@ namespace Magna.Web.Menu
     /// </summary>
     public class GetMenuList : IHttpHandler
     {
-
+        string Action = "";
         public void ProcessRequest(HttpContext context)
         {
             context.Response.ContentType = "text/plain";
-
-            context.Response.Write(GetUserMenu());
+            Action = RequstString("Action");
+            if (Action == "TEST")
+            {
+                context.Response.Write(TEST());
+            }
+            else
+            {
+                context.Response.Write(GetUserMenu());
+            }
+            
         }
 
         public string  GetUserMenu()
@@ -26,12 +34,27 @@ namespace Magna.Web.Menu
             return json;
         }
 
+        public string TEST()
+        {
+            UserM_UserInfo userInfo = new UserM_UserInfo();
+            userInfo.user_no = RequstString("UserNo");
+            int page = int.Parse(RequstString("page"));
+            int pagesize = int.Parse(RequstString("rows"));
+            string json = UserM_UserInfoBLL.GetUserInfoList( page, pagesize, (page - 1) * pagesize + 1, page * pagesize,userInfo);
+            return json;
+        }
         public bool IsReusable
         {
             get
             {
                 return false;
             }
+        }
+
+        public static string RequstString(string sParam)
+        {
+            return (HttpContext.Current.Request[sParam] == null ? string.Empty
+                  : HttpContext.Current.Request[sParam].ToString().Trim());
         }
     }
 }
