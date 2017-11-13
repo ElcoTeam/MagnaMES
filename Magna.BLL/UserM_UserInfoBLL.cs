@@ -11,10 +11,10 @@ namespace Magna.BLL
 {
     public class UserM_UserInfoBLL
     {
-        public static string GetUserInfoList(int page, int pagesize, int startIndex, int endIndex, UserM_UserInfo userInfo)
+        public static string GetUserInfoList(int page, int pagesize, string sidx, string sord,  UserM_UserInfo userInfo)
         {
             string jsonStr = "[]";
-            DataListModel<UserM_UserInfo> userList = UserM_UserInfoDAL.GetUserInfoList(page, pagesize, startIndex, endIndex , userInfo);
+            DataListModel<UserM_UserInfo> userList = UserM_UserInfoDAL.GetUserInfoList(page, pagesize, sidx, sord, userInfo);
 
             //List<UserM_Menu> menuList = UserM_MenuDAL.GetUserMenuList();
             jsonStr = JSONTools.ScriptSerialize<DataListModel<UserM_UserInfo>>(userList);

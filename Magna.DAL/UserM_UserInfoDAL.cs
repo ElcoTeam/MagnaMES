@@ -14,23 +14,40 @@ namespace Magna.DAL
     public class UserM_UserInfoDAL
     {
         public static readonly string SqlConnString = ConfigurationManager.ConnectionStrings["ELCO_ConnectionString"].ConnectionString;
-        public static DataListModel<UserM_UserInfo> GetUserInfoList(int page, int pagesize, int startIndex, int endIndex, UserM_UserInfo userInfo)
+
+
+        /// <summary>
+        /// 获取用户列表
+        /// </summary>
+        /// <param name="page">当前页</param>
+        /// <param name="pagesize">每页记录数</param>
+        /// <param name="sidx">排序名称</param>
+        /// <param name="sord">排序方式</param>
+        /// <param name="userInfo">用户类</param>
+        /// <returns></returns>
+        public static DataListModel<UserM_UserInfo> GetUserInfoList(int page, int pagesize, string sidx, string sord, UserM_UserInfo userInfo)
         {
             List<UserM_UserInfo> userList = new List<UserM_UserInfo>();
             DataListModel<UserM_UserInfo> userdata = new DataListModel<UserM_UserInfo>();
+            int totalcount = 0;
             using (var conn = new SqlConnection(SqlConnString))
             {
 
                 var param = new DynamicParameters();
                 param.Add("@UserNo", userInfo.user_no);
-                param.Add("@StartIndex", startIndex);
-                param.Add("@EndIndex", endIndex);
+                param.Add("@StartIndex", (page - 1) * pagesize + 1);
+                param.Add("@EndIndex", page * pagesize);
+                param.Add("@sidx", sidx);
+                param.Add("@sord", sord);
+                param.Add("@totalcount", 0, DbType.Int32, ParameterDirection.Output);
+
                 userList = conn.Query<UserM_UserInfo>("usp_UserM_GetUserInfoList", param, null, true, null, CommandType.StoredProcedure).ToList();
+                totalcount = param.Get<int>("@totalcount");
                 userdata.dataList = userList;
-                userdata.totalCount = userList.Count().ToString();
+                userdata.totalCount = totalcount.ToString();
                 userdata.currPage = page.ToString();
-                userdata.totalpages = (userList.Count() % Convert.ToInt16(pagesize) == 0 ? userList.Count()
-                / Convert.ToInt16(pagesize) : userList.Count() / Convert.ToInt16(pagesize)
+                userdata.totalpages = (totalcount % Convert.ToInt16(pagesize) == 0 ? totalcount
+                / Convert.ToInt16(pagesize) : totalcount / Convert.ToInt16(pagesize)
                 + 1).ToString(); // 计算总页数 
                 return userdata;
                 //return conn.Query<DataListModel<UserM_UserInfo>>("select * from UserM_Menu").ToList();

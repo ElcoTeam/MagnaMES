@@ -119,7 +119,7 @@
                rowNum: 30,
                rowList: [30, 50, 100],
                pager: "#gridPager",
-               sortname: '_user_id asc',
+               sortname: 'user_id',
                rownumbers: true,
                rownumWidth: 50,
                shrinkToFit: false,
@@ -131,7 +131,16 @@
                    $("#" + this.id).setSelection(selectedRowIndex, false);
                }
            });
-          
+
+           //查询事件
+           $("#btn_Search").click(function () {
+               $gridTable.jqGrid('setGridParam', {
+                   postData: {
+                       Action: "TEST",
+                       UserNo: $("#UserNo").val()
+                   }
+               }).trigger('reloadGrid');
+           });
        }
 
      </script>     

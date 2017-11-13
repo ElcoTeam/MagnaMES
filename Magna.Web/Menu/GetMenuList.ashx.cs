@@ -40,7 +40,9 @@ namespace Magna.Web.Menu
             userInfo.user_no = RequstString("UserNo");
             int page = int.Parse(RequstString("page"));
             int pagesize = int.Parse(RequstString("rows"));
-            string json = UserM_UserInfoBLL.GetUserInfoList( page, pagesize, (page - 1) * pagesize + 1, page * pagesize,userInfo);
+            string sidx = RequstString("sidx");    //排序名称
+            string sord = RequstString("sord");    //排序方式
+            string json = UserM_UserInfoBLL.GetUserInfoList( page, pagesize, sidx, sord, userInfo);
             return json;
         }
         public bool IsReusable
